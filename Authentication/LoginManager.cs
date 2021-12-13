@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Globalization;
 
 namespace Authentication
 {
@@ -18,7 +19,7 @@ namespace Authentication
 	        }
 	        catch (LoggerException e)
 	        {
-	            WebService.Write(e.Message + Environment.MachineName);
+	            WebService.Write(DateTime.Now.ToString(CultureInfo.InvariantCulture) + ": " + e.Message + " " + Environment.MachineName + ".");
 	        }
 	        if (m_users[user] != null &&
 	            (string) m_users[user] == password)
