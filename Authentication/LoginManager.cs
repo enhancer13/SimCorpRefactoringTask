@@ -15,7 +15,7 @@ namespace Authentication
 		        //deal with network
 		        //deal with network
 		        //deal with network
-		        Logger.Write("blah");
+		        Logger.Write($"Login attempt: {user}");
 	        }
 	        catch (LoggerException e)
 	        {
